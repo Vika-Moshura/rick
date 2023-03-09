@@ -1,0 +1,44 @@
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  margin: 0 auto;
+  width: 1020px;
+  background-color: purple;
+
+  .logo {
+    width: 600px;
+    height: 200px;
+    margin-top: 86px;
+  }
+
+  .input {
+    position: relative;
+    width: 100%;
+
+    &::before {
+      position: absolute;
+      content: url("../../../assets/images/Vector.png");
+      display: block;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .search {
+    width: 100%;
+    height: 56px;
+    padding: 16px;
+    margin-top: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
