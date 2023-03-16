@@ -1,1 +1,31 @@
-<p>character works!</p>
+<div class="character">
+  <div class="character__image"><img [src]="character.image" alt=""></div>
+  <div class="character__name">{{character.name | slice:0:16}}</div>
+  <div class="character__information">Informations</div>
+  <div class="character__info">
+    <div>
+      <p>Gender</p>
+      <p>{{character.gender}}</p>
+    </div>
+    <div>
+      <p>Status</p>
+      <p>{{character.status}}</p>
+    </div>
+    <div>
+      <p>Specie</p>
+      <p>{{character.species}}</p>
+    </div>
+    <div>
+      <p>Origin</p>
+      <p>{{character.origin.name}}</p>
+    </div>
+    <div>
+      <p>Type</p>
+      <p>{{character.type || 'Unknown'}}</p>
+    </div>
+  </div>
+</div>
+<div class="arrow" [routerLink]="[ '/character']" routerLinkActive="active"><img
+    src="../../../assets/images/arrow_back_24px.png" alt="">
+  <div>GO BACK</div>
+</div>

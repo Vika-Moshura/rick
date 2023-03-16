@@ -1,4 +1,20 @@
 <main class="main d-flex-column">
   <img class="logo" src="../../../assets/images/PngItem_438051 1.png" alt="rick&morty">
-  <div class="input"><input class="search" type="text" name="search" placeholder="Filter by name..."></div>
+  <div class="input"><input class="search" type="text" placeholder="Filter by name..." value="{{searchValue}}"
+      (input)="filterCharacters($event)"></div>
+  <div class="characters" *ngIf="!error">
+    <div class="character" *ngFor="let character of userCharacters">
+      <img class="character__image" [routerLink]="[ '/character', character.id ]" routerLinkActive="active"
+        [src]="character.image" [alt]="character.name">
+      <div class="character_info" [routerLink]="[ '/character', character.id ]" routerLinkActive="active">
+        <div class="character__name">{{character.name | slice:0:16}}</div>
+        <div class="character__species">{{character.species}}</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="pagination">
+    <a (click)="changePage(false)">Previous</a>
+    <a (click)="changePage(true)">Next</a>
+  </div>
 </main>

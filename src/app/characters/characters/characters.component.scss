@@ -8,7 +8,6 @@
 .main {
   margin: 0 auto;
   width: 1020px;
-  background-color: purple;
 
   .logo {
     width: 600px;
@@ -24,21 +23,79 @@
       position: absolute;
       content: url("../../../assets/images/Vector.png");
       display: block;
-      top: 0;
-      left: 0;
+      top: 50%;
+      left: 2%;
     }
   }
 
   .search {
     width: 100%;
     height: 56px;
-    padding: 16px;
+    padding: 16px 48px;
     margin-top: 16px;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 8px;
+    font-family: RobotoRegular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
 
     &::placeholder {
       color: rgba(0, 0, 0, 0.5);
     }
   }
+
+  .characters {
+    margin: 60px 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .character {
+      width: 240px;
+      height: 244px;
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);
+      border-radius: 4px;
+      margin-bottom: 23px;
+      cursor: pointer;
+
+      &_info {
+        padding: 8px 16px;
+      }
+
+      &__name {
+        color: rgba(0, 0, 0, 0.87);
+        letter-spacing: 0.15px;
+        font-size: 20px;
+        line-height: 30px;
+        font-family: RobotoMedium;
+      }
+
+      &__species {
+        font-size: 14px;
+        font-family: RobotoRegular;
+        line-height: 21px;
+        letter-spacing: 0.25px;
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      &__image {
+        width: 240px;
+        height: 170px;
+      }
+    }
+  }
+
+  .pagination {
+    a {
+      color: blue;
+      cursor: pointer;
+      margin: 0 20px;
+    }
+  }
+
 }
