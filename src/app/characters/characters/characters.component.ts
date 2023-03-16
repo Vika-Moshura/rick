@@ -37,7 +37,7 @@ export class CharactersComponent implements OnInit {
         this.userCharacters = data.results;
         this.userCharacters.sort((a, b) => (a.name > b.name ? 1 : ((b.name > a.name) ? -1 : 0)));
       }, () => {
-        this.toastr.error('This is the last page');
+        this.toastr.error("This is the last page");
       })
     }
     else if (this.searchValue) {
@@ -45,7 +45,7 @@ export class CharactersComponent implements OnInit {
         this.userCharacters = data.results;
         this.userCharacters.sort((a, b) => (a.name > b.name ? 1 : ((b.name > a.name) ? -1 : 0)));
       }, () => {
-        this.toastr.error('This character isnt found');
+        this.toastr.error("This character isn't found");
         this.error = true;
       })
     }
@@ -59,13 +59,13 @@ export class CharactersComponent implements OnInit {
       this.userCharacters = data.results;
       this.userCharacters.sort((a, b) => (a.name > b.name ? 1 : ((b.name > a.name) ? -1 : 0)));
     }, () => {
-      this.toastr.error('This character isnt found');
+      this.toastr.error("This character isn't found");
       this.error = true;
     })
   }
 
   changePage(value: boolean): void {
-    if (!value && this.page >= 1) {
+    if (!value && this.page >= 2) {
       --this.page;
       localStorage.setItem('page', JSON.stringify(this.page));
       this.getAll(this.page);
@@ -76,5 +76,5 @@ export class CharactersComponent implements OnInit {
       this.getAll(this.page);
     }
   }
-  
+
 }

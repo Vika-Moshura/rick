@@ -77,3 +77,43 @@
     margin-left: 10px;
   }
 }
+
+@media screen and (max-width:360px) {
+  .character {
+    margin: 124px auto;
+
+    &__image {
+      img {
+        width: 150px;
+        height: 148px;
+      }
+    }
+
+    &__name {
+      font-size: 32px;
+      line-height: 38px;
+      margin-top: 26px;
+    }
+
+    &__information {
+      margin: 31px 0 24px 0;
+      padding-left: 23px;
+      align-self: flex-start;
+
+    }
+
+    &__info {
+      div {
+        width: 312px;
+        height: 64px;
+        padding-left: 16px;
+      }
+    }
+  }
+
+  .arrow {
+    top: 25px;
+    left: 29px;
+  }
+
+}
