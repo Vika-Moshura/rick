@@ -1,0 +1,24 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background: #eeeeee;
+  width: 100%;
+  position: fixed;
+}
+
+.btn {
+  width: 70px;
+  height: 40px;
+}
+
+.btn-red {
+  color: rgb(92, 16, 16);
+  color: white;
+}
+
+.btn-blue {
+  background-color: rgb(52, 154, 238);
+  color: white;
+}

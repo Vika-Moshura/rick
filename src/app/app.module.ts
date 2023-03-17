@@ -3,19 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { ToastrModule } from 'ngx-toastr';
+import { AuthModule } from '@auth0/auth0-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CharactersComponent } from './characters/characters/characters.component';
 import { CharacterComponent } from './characters/character/character.component';
+import { environment } from 'src/environments/environment';
+import { AuthorizationComponent } from './authorization/authorization/authorization.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharactersComponent,
-    CharacterComponent
+    CharacterComponent,
+    AuthorizationComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +27,7 @@ import { CharacterComponent } from './characters/character/character.component';
     FormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    AuthModule.forRoot(environment.auth),
   ],
   providers: [],
   bootstrap: [AppComponent]
