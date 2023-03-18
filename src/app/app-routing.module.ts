@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CharacterComponent } from './characters/character/character.component';
 import { CharactersComponent } from './characters/characters/characters.component';
 import { CharactersService } from './shared/services/characters.service';
+import { AuthGuard } from '@auth0/auth0-angular';
 
 const routes: Routes = [
   {
@@ -11,7 +12,8 @@ const routes: Routes = [
   {
     path: 'character/:id', component: CharacterComponent, resolve: {
       characterInfo: CharactersService,
-    }
+    },
+    canActivate: [AuthGuard],
   },
   { path: '', pathMatch: 'full', redirectTo: 'character' },
 ];

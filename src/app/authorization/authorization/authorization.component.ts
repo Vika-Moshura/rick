@@ -13,6 +13,5 @@ export class AuthorizationComponent implements OnInit {
 
   }
   ngOnInit(): void {
-
   }
 }

@@ -1,5 +1,4 @@
 <header>
-  <h2>Hi, friend!</h2>
   <div *ngIf="auth.isAuthenticated$ | async; else loggedOut">
     <button class="btn btn-red" (click)="auth.logout()">
       Log out
