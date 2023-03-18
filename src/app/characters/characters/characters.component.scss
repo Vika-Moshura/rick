@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .main {
@@ -101,8 +102,13 @@
   }
 
 }
+@media screen and (max-width:1200px){
+ .main {
+    width: 80%;
+}
+}
 
-@media screen and (max-width:360px) {
+@media screen and (max-width:720px) {
   .main {
     width: 312px;
 
